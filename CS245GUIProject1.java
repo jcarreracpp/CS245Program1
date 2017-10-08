@@ -18,7 +18,7 @@ public class CS245GUIProject1 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        LaunchHangman hoh = new LaunchHangman();
+        new LaunchHangman();
     }
 
     

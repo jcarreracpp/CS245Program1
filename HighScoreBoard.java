@@ -18,9 +18,12 @@ import javax.swing.JLabel;
  */
 public class HighScoreBoard {
     
-    public HighScoreBoard(JFrame parent, int[] s){
+    public HighScoreBoard(){}
+    
+    public JPanel highScoreBoard(){
+        int[] s = new int[5];
         JLabel Header = new JLabel("HIGHSCORES");
-        Header.setFont(new Font("Papyrus", Font.PLAIN, 30));
+        Header.setFont(new Font("Times New Roman", Font.PLAIN, 30));
         Header.setHorizontalAlignment(JLabel.CENTER);
         JPanel ScoreList = new JPanel();
         ScoreList.setBackground(Color.orange);
@@ -43,12 +46,6 @@ public class HighScoreBoard {
         ScoreList.add(Score3);
         ScoreList.add(Score4);
         ScoreList.add(Score5);
-        parent.add(ScoreList);
-       
-    }
-    
-    private void init(){
-        JPanel base = new JPanel();
-        base.setBackground(Color.GRAY);
+        return ScoreList;
     }
 }

@@ -16,7 +16,7 @@ public class LaunchHangman {
 
         Runnable guiOperate = new Runnable(){
             public void run(){
-                GUIManager heh = new GUIManager();
+                new GUIManager();
             }
         };
         SwingUtilities.invokeLater(guiOperate);
