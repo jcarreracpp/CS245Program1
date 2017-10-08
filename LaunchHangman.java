@@ -13,12 +13,10 @@ import javax.swing.SwingUtilities;
  */
 public class LaunchHangman {
     public LaunchHangman(){
-        SplashScreen heh = new SplashScreen();
-        HighScoreBoard heoh = new HighScore
+
         Runnable guiOperate = new Runnable(){
             public void run(){
-                heh.setVisible(true);
-                heh.add(new HighScoreBoard());
+                GUIManager heh = new GUIManager();
             }
         };
         SwingUtilities.invokeLater(guiOperate);
