@@ -35,7 +35,6 @@ public class SplashScreen extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(600, 400));
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
-        jPanel1.setForeground(new java.awt.Color(0, 0, 0));
         jPanel1.setToolTipText("");
         jPanel1.setMaximumSize(new java.awt.Dimension(600, 400));
 
