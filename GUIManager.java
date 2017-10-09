@@ -20,6 +20,7 @@ public class GUIManager {
     private MainSplash ms = new MainSplash();
     private JPanel temp = ms.mainSplash();
     private HighScoreBoard h = new HighScoreBoard();
+    private Menu m = new Menu();
     
     public GUIManager(){
         begin();
@@ -32,7 +33,7 @@ public class GUIManager {
             @Override
             public void actionPerformed(ActionEvent e){
                 timer.stop();
-                temp = h.highScoreBoard();
+                temp = m.menu();
                 mainFrame.add(temp);
                 mainFrame.setVisible(true);
             }
