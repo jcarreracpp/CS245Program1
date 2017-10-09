@@ -10,6 +10,7 @@ import java.awt.event.ActionListener;
 import java.text.DateFormat;
 import java.util.Date;
 import javax.swing.*;
+import java.util.Random;
 
 /**
  *
@@ -18,14 +19,60 @@ import javax.swing.*;
 public class HangmanPanel extends javax.swing.JPanel 
 {
 
+    boolean gameover = false;
+    int gamePoint = 100;
     /**
      * Creates new form HangmanPanel
      */
     public HangmanPanel() 
     {
         initComponents();
+        char [] answer = setAnswers();
+        
+        
+    }
+    /*
+    This method will randomly choose an answer, and returns the answer in char array.
+    */
+    public char[] setAnswers()
+    {
+        Random rand = new Random();
+        int randVal = rand.nextInt(5);
+        int numArray = 0;
+        String answer;
+        boolean gameover = false;
+        int gamePoint = 100;
+        
+        switch(randVal)
+        {
+            case 1:
+                answer = "abstract";
+                numArray = 8;
+                break;
+            case 2:
+                answer = "cemetery";
+                numArray = 8;
+                break;
+            case 3:
+                answer = "nurse";
+                numArray = 5;
+                break;
+            case 4:
+                answer = "pharmacy";
+                numArray = 8;
+                break;
+            default:
+                answer = "climbing";
+                numArray = 8;
+                break;    
+        }
+        char [] array = answer.toCharArray(); // saving string answer to char array.
+        return array;
     }
     
+    /*
+    This method will convert the JLabel3 into the real date and time.
+    */
     public void setDate()
     {
         ActionListener actiondate = new ActionListener() 
@@ -39,6 +86,7 @@ public class HangmanPanel extends javax.swing.JPanel
         };
         new javax.swing.Timer(1000, actiondate).start();
     }
+    
     
 
     /**
